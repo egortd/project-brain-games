@@ -1,0 +1,21 @@
+{
+  "name": "brain-games",
+  "version": "1.0.0",
+  "description": "My first project that run set of Brain Games",
+  "main": "index.js",
+  "bin": {
+    "brain-games": "src/bin/brain-games.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Grachev Egor",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1"
+  }
+}

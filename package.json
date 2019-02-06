@@ -1,10 +1,11 @@
 {
   "name": "my-hexlet-project-brain-games",
-  "version": "1.1.2",
+  "version": "1.2.3",
   "description": "My first project that run set of Brain Games",
   "main": "",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js"
   },
   "files": [
     "dist"

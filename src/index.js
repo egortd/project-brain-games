@@ -1,16 +1,14 @@
 import readlineSync from 'readline-sync';
-import { description, getCorrectAnswer } from './games/even';
-import getNumber from './utils';
 
-export const greeting = (rules = '') => {
+export const greeting = (title = '') => {
   console.log('Welcome to the Brain Games!');
-  console.log(rules);
+  console.log(title);
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!\n`);
   return userName;
 };
 
-const runEven = () => {
+export const run = (description, getQuestion, getCorrectAnswer) => {
   const user = greeting(description);
   const attempt = 3;
   const askQuestion = (counter) => {
@@ -19,10 +17,10 @@ const runEven = () => {
       message = `Congratulations, ${user}!`;
       return message;
     }
-    const question = getNumber(1, 100);
+    const question = getQuestion();
     console.log(`Question: ${question}`);
-    const userAnswer = readlineSync.question('Your answer: ');
     const correctAnswer = getCorrectAnswer(question);
+    const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer !== correctAnswer) {
       message = `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${user}!`;
       return message;
@@ -32,4 +30,3 @@ const runEven = () => {
   };
   console.log(askQuestion(1));
 };
-export default runEven;

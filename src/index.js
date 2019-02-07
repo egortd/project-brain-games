@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
-import { rulesEven, getCorrectAnswer } from './games/even';
-import { getNumber } from './utils';
+import { description, getCorrectAnswer } from './games/even';
+import getNumber from './utils';
 
 export const greeting = (rules = '') => {
   console.log('Welcome to the Brain Games!');
@@ -10,29 +10,26 @@ export const greeting = (rules = '') => {
   return userName;
 };
 
-export const getAnswer = (question) => {
-  console.log(`Question: ${question}`);
-  const answer = readlineSync.question('Your answer: ');
-  return answer;
-};
-
 const runEven = () => {
-  const user = greeting(rulesEven);
-  const askQuestion = (counter = 1) => {
-    if (counter > 3) {
-      console.log(`Congratulations, ${user}!`);
-      return null;
+  const user = greeting(description);
+  const attempt = 3;
+  const askQuestion = (counter) => {
+    let message = '';
+    if (counter > attempt) {
+      message = `Congratulations, ${user}!`;
+      return message;
     }
-    const randomNumber = getNumber();
-    const userAnswer = getAnswer(randomNumber);
-    const correctAnswer = getCorrectAnswer(randomNumber);
+    const question = getNumber(1, 100);
+    console.log(`Question: ${question}`);
+    const userAnswer = readlineSync.question('Your answer: ');
+    const correctAnswer = getCorrectAnswer(question);
     if (userAnswer !== correctAnswer) {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${user}!`);
-      return null;
+      message = `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${user}!`;
+      return message;
     }
     console.log('Correct!');
     return askQuestion(counter + 1);
   };
-  askQuestion();
+  console.log(askQuestion(1));
 };
 export default runEven;

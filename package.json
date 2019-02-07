@@ -1,6 +1,6 @@
 {
   "name": "my-hexlet-project-brain-games",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "My first project that run set of Brain Games",
   "main": "",
   "bin": {

@@ -1,9 +1,3 @@
-import { isEven } from '../utils';
-
-export const rulesEven = 'Answer "yes" if number even otherwise answer "no".\n';
-export const getCorrectAnswer = (number) => {
-  if (isEven(number)) {
-    return 'yes';
-  }
-  return 'no';
-};
+export const description = 'Answer "yes" if number even otherwise answer "no".\n';
+const isEven = number => number % 2 === 0;
+export const getCorrectAnswer = number => ((isEven(number)) ? 'yes' : 'no');

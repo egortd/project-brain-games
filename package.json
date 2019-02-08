@@ -1,6 +1,6 @@
 {
   "name": "my-hexlet-project-brain-games",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "My first project that run set of Brain Games",
   "main": "",
   "bin": {
@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "@types/readline-sync": "^1.4.3",
+    "hexlet-pairs": "^1.0.8",
     "readline-sync": "^1.4.9"
   }
 }

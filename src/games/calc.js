@@ -1,27 +1,30 @@
-/* eslint no-eval: 0 */
+import { cons } from 'hexlet-pairs';
 import getNumber from '../utils';
-import { run } from '../index';
+import { run } from '..';
 
 const description = 'What is the result of the expression?\n';
 
-const getQuestion = () => {
+const getQuestionAndAnswer = () => {
   const a = getNumber(1, 100);
   const b = getNumber(1, 100);
   const sign = getNumber(0, 3);
   let question;
+  let correctAnswer;
   switch (sign) {
     case 0:
       question = `${a} + ${b}`;
+      correctAnswer = a + b;
       break;
     case 1:
-      question = `${b} - ${a}`;
+      question = `${a} - ${b}`;
+      correctAnswer = a - b;
       break;
     default:
       question = `${a} * ${b}`;
+      correctAnswer = a * b;
       break;
   }
-  return question;
+  return cons(question, String(correctAnswer));
 };
-const getCorrectAnswer = string => String(eval(string));
 
-export default () => run(description, getQuestion, getCorrectAnswer);
+export default () => run(description, getQuestionAndAnswer);

@@ -1,7 +1,7 @@
 install:
 		npm install
 start:
-		npx babel-node -- 'dist/bin/brain-even.js'
+		npx babel-node -- 'dist/bin/brain-calc.js'
 build:
 		npm run build
 publish:

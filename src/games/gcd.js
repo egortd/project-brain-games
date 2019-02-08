@@ -1,8 +1,8 @@
 import { cons } from 'hexlet-pairs';
 import getNumber from '../utils';
-import { run } from '..';
+import run from '..';
 
-const description = 'Find the greatest common divisor of given numbers.\n';
+const description = 'Find the greatest common divisor of given numbers.';
 
 const getGcd = (number, number2) => {
   if (number < number2) {

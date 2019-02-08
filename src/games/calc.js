@@ -1,8 +1,8 @@
 import { cons } from 'hexlet-pairs';
 import getNumber from '../utils';
-import { run } from '..';
+import run from '..';
 
-const description = 'What is the result of the expression?\n';
+const description = 'What is the result of the expression?';
 
 const getQuestionAndAnswer = () => {
   const a = getNumber(1, 100);

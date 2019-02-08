@@ -3,3 +3,4 @@
 [![Build Status](https://travis-ci.org/egortd/project-lvl1-s442.svg?branch=master)](https://travis-ci.org/egortd/project-lvl1-s442)
 [![asciicast](https://asciinema.org/a/U8qlyfVPmC7CybUrhlt3tK5Bx.svg)](https://asciinema.org/a/U8qlyfVPmC7CybUrhlt3tK5Bx)
 [![asciicast](https://asciinema.org/a/s6WLkoCP2t1LTUzyzcRBGv6R5.svg)](https://asciinema.org/a/s6WLkoCP2t1LTUzyzcRBGv6R5)
+[![asciicast](https://asciinema.org/a/khxnmrKnL1ZwNUAvDOEerehQu.svg)](https://asciinema.org/a/khxnmrKnL1ZwNUAvDOEerehQu)

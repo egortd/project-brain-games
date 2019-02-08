@@ -1,7 +1,7 @@
 install:
 		npm install
 start:
-		npx babel-node -- 'dist/bin/brain-calc.js'
+		npx babel-node -- 'dist/bin/brain-gcd.js'
 build:
 		npm run build
 publish:

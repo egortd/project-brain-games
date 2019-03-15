@@ -1,7 +1,7 @@
 install:
 		npm install
 start:
-		npx babel-node -- 'dist/bin/brain-prime.js'
+		npx babel-node -- 'dist/bin/brain-games.js'
 build:
 		npm run build
 publish:

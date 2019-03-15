@@ -1,5 +1,10 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from 'hexlet-pairs';
+import runEvenGame from './games/even';
+import runCalcGame from './games/calc';
+import runGCDGame from './games/gcd';
+import runProgressionGame from './games/progression';
+import runPrimeGame from './games/prime';
 
 const greeting = (title) => {
   console.log('Welcome to the Brain Games!');
@@ -11,7 +16,7 @@ const greeting = (title) => {
 };
 
 const attempt = 3;
-const run = (description, getQuestionAndAnswer) => {
+const runGame = (description, getQuestionAndAnswer) => {
   const user = greeting(description);
   const askQuestion = (counter) => {
     if (counter > attempt) {
@@ -33,4 +38,28 @@ const run = (description, getQuestionAndAnswer) => {
   };
   askQuestion(1);
 };
-export default run;
+export default runGame;
+
+export const runMenu = () => {
+  console.log('Choose the game:');
+  console.log('1. Even number');
+  console.log('2. Calculate the expression');
+  console.log('3. Greatest common divisor');
+  console.log('4. Guess missing number');
+  console.log('5. Prime number');
+  console.log('0. Exit');
+  const userChoice = readlineSync.question('Your choice: ');
+  console.log();
+  switch (userChoice) {
+    case '1': runEvenGame(); break;
+    case '2': runCalcGame(); break;
+    case '3': runGCDGame(); break;
+    case '4': runProgressionGame(); break;
+    case '5': runPrimeGame(); break;
+    case '0': break;
+    default:
+      console.log(`"${userChoice}" is not found.`);
+      console.log();
+      runMenu();
+  }
+};

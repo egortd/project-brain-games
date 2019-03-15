@@ -7,7 +7,7 @@ const description = 'What is the result of the expression?';
 const getQuestionAndAnswer = () => {
   const a = getNumber(1, 100);
   const b = getNumber(1, 100);
-  const sign = getNumber(0, 3);
+  const sign = getNumber(0, 2);
   let question;
   let correctAnswer;
   switch (sign) {

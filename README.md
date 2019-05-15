@@ -3,13 +3,13 @@
 [![Build Status](https://travis-ci.org/egortd/project-brain-games.svg?branch=master)](https://travis-ci.org/egortd/project-brain-games)
 
 ### Install
-> execute `<npm i -g my-hexlet-project-brain-games>` to install package
+execute `npm i -g my-hexlet-project-brain-games` to install package
 
 ### Usage
-Run _brain-games_ to see the list of games and choose the one:
-    1. Even number
-    2. Calculate the expression
-    3. Greatest common divisor
-    4. Guess missing number
-    5. Prime number
+Run __brain-games__ to see the list of games and choose the one:
+1. `Even number`
+2. `Calculate the expression`
+3. `Greatest common divisor`
+4. `Guess missing number`
+5. `Prime number`
 Choose __0__ for exit.

@@ -1,6 +1,4 @@
-import { cons } from 'hexlet-pairs';
 import getNumber from '../utils';
-import run from '..';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -19,7 +17,7 @@ const isPrime = (number) => {
 const getQuestionAndAnswer = () => {
   const question = getNumber(0, 100);
   const correctAnswer = (isPrime(question) ? 'yes' : 'no');
-  return cons(question, correctAnswer);
+  return { question, correctAnswer };
 };
 
-export default () => run(description, getQuestionAndAnswer);
+export default () => ([description, getQuestionAndAnswer]);

@@ -1,6 +1,4 @@
-import { cons } from 'hexlet-pairs';
 import getNumber from '../utils';
-import run from '..';
 
 const description = 'What number is missing in the progression?';
 
@@ -22,7 +20,7 @@ const getQuestionAndAnswer = () => {
     question += (i === lostNumberPosition) ? '.. ' : `${firstNumber + progressionStep * i} `;
   }
   const correctAnswer = String(getProgression(firstNumber, progressionStep, lostNumberPosition));
-  return cons(question, correctAnswer);
+  return { question, correctAnswer };
 };
 
-export default () => run(description, getQuestionAndAnswer);
+export default () => ([description, getQuestionAndAnswer]);

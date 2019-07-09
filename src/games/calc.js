@@ -1,6 +1,4 @@
-import { cons } from 'hexlet-pairs';
 import getNumber from '../utils';
-import run from '..';
 
 const description = 'What is the result of the expression?';
 
@@ -9,22 +7,23 @@ const getQuestionAndAnswer = () => {
   const b = getNumber(1, 100);
   const sign = getNumber(0, 2);
   let question;
-  let correctAnswer;
+  let result;
   switch (sign) {
     case 0:
       question = `${a} + ${b}`;
-      correctAnswer = a + b;
+      result = a + b;
       break;
     case 1:
       question = `${a} - ${b}`;
-      correctAnswer = a - b;
+      result = a - b;
       break;
     default:
       question = `${a} * ${b}`;
-      correctAnswer = a * b;
+      result = a * b;
       break;
   }
-  return cons(question, String(correctAnswer));
+  const correctAnswer = String(result);
+  return { question, correctAnswer };
 };
 
-export default () => run(description, getQuestionAndAnswer);
+export default () => ([description, getQuestionAndAnswer]);

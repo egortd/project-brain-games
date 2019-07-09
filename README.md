@@ -14,3 +14,6 @@ Run __brain-games__ to see the list of games and choose the one:
 5. `Prime number`
 
 Choose __0__ for exit.
+
+## Asciinema
+[![asciicast](https://asciinema.org/a/42Vjrb7spqRUlIfAmg8WDKPg7.svg)](https://asciinema.org/a/42Vjrb7spqRUlIfAmg8WDKPg7)

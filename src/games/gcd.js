@@ -1,6 +1,4 @@
-import { cons } from 'hexlet-pairs';
 import getNumber from '../utils';
-import run from '..';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
@@ -19,7 +17,7 @@ const getQuestionAndAnswer = () => {
   const b = getNumber(0, 100);
   const question = `${a} ${b}`;
   const correctAnswer = String(getGcd(a, b));
-  return cons(question, correctAnswer);
+  return { question, correctAnswer };
 };
 
-export default () => run(description, getQuestionAndAnswer);
+export default () => ([description, getQuestionAndAnswer]);

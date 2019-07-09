@@ -1,7 +1,7 @@
 {
   "name": "my-hexlet-project-brain-games",
-  "version": "1.7.0",
-  "description": "My first project that run the set of Brain Games",
+  "version": "1.7.1",
+  "description": "Set of the arithmetic games",
   "main": "",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
@@ -21,14 +21,14 @@
   "author": "Grachev Egor",
   "license": "ISC",
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.2.2",
-    "@babel/node": "^7.2.2",
-    "@babel/preset-env": "^7.3.1",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.13.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.16.0"
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.4",
+    "@babel/node": "^7.5.0",
+    "@babel/preset-env": "^7.5.4",
+    "babel-eslint": "^10.0.2",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.0"
   },
   "dependencies": {
     "@types/readline-sync": "^1.4.3",

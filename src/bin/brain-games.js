@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import { runMenu } from '..';
+import runMenu from '..';
 
 runMenu();

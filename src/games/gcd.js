@@ -1,4 +1,4 @@
-import getNumber from '../utils';
+import { getNumber } from '../utils';
 
 const description = 'Find the greatest common divisor of given numbers.';
 

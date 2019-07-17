@@ -1,4 +1,4 @@
-import getNumber from '../utils';
+import { getNumber, isCorrectAnswer } from '../utils';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -16,7 +16,8 @@ const isPrime = (number) => {
 
 const getQuestionAndAnswer = () => {
   const question = getNumber(0, 100);
-  const correctAnswer = (isPrime(question) ? 'yes' : 'no');
+  const answer = isPrime(question);
+  const correctAnswer = isCorrectAnswer(answer);
   return { question, correctAnswer };
 };
 

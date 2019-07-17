@@ -1,4 +1,4 @@
-import getNumber from '../utils';
+import { getNumber } from '../utils';
 
 const description = 'What is the result of the expression?';
 

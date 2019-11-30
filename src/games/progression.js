@@ -1,4 +1,4 @@
-import { getNumber } from '../utils';
+import { getRandomNumberWithin } from '../utils';
 
 const description = 'What number is missing in the progression?';
 
@@ -12,9 +12,9 @@ const getProgression = (start, step, position) => {
 
 const progressionLength = 10;
 const getQuestionAndAnswer = () => {
-  const firstNumber = getNumber(1, 100);
-  const progressionStep = getNumber(1, 100);
-  const lostNumberPosition = getNumber(0, progressionLength - 1);
+  const firstNumber = getRandomNumberWithin(1, 100);
+  const progressionStep = getRandomNumberWithin(1, 100);
+  const lostNumberPosition = getRandomNumberWithin(0, progressionLength - 1);
   let question = '';
   for (let i = 0; i < progressionLength; i += 1) {
     question += (i === lostNumberPosition) ? '.. ' : `${firstNumber + progressionStep * i} `;
@@ -23,4 +23,4 @@ const getQuestionAndAnswer = () => {
   return { question, correctAnswer };
 };
 
-export default () => ([description, getQuestionAndAnswer]);
+export default { description, getQuestionAndAnswer };

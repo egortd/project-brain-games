@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import runMenu from '..';
+import app from '..';
 
-runMenu();
+app.run();

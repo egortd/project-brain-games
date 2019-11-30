@@ -1,4 +1,4 @@
-import { getNumber } from '../utils';
+import { getRandomNumberWithin } from '../utils';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
@@ -13,11 +13,11 @@ const getGcd = (number, number2) => {
 };
 
 const getQuestionAndAnswer = () => {
-  const a = getNumber(0, 100);
-  const b = getNumber(0, 100);
+  const a = getRandomNumberWithin(0, 100);
+  const b = getRandomNumberWithin(0, 100);
   const question = `${a} ${b}`;
   const correctAnswer = String(getGcd(a, b));
   return { question, correctAnswer };
 };
 
-export default () => ([description, getQuestionAndAnswer]);
+export default { description, getQuestionAndAnswer };

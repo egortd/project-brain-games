@@ -1,11 +1,11 @@
-import { getNumber } from '../utils';
+import { getRandomNumberWithin } from '../utils';
 
 const description = 'What is the result of the expression?';
 
 const getQuestionAndAnswer = () => {
-  const a = getNumber(1, 100);
-  const b = getNumber(1, 100);
-  const sign = getNumber(0, 2);
+  const a = getRandomNumberWithin(1, 100);
+  const b = getRandomNumberWithin(1, 100);
+  const sign = getRandomNumberWithin(0, 2);
   let question;
   let result;
   switch (sign) {
@@ -26,4 +26,4 @@ const getQuestionAndAnswer = () => {
   return { question, correctAnswer };
 };
 
-export default () => ([description, getQuestionAndAnswer]);
+export default { description, getQuestionAndAnswer };

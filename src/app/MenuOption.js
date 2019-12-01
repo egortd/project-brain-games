@@ -1,7 +1,7 @@
 export default class MenuOption {
-  constructor(command, option, name) {
+  constructor(command, game, name) {
     this.command = command;
-    this.option = option;
+    this.game = game;
     this.name = name;
   }
 
@@ -11,9 +11,5 @@ export default class MenuOption {
 
   showName() {
     console.log(`\n${this.name}`);
-  }
-
-  select() {
-    return this.option;
   }
 }

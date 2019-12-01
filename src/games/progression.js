@@ -1,4 +1,4 @@
-import { getRandomNumberWithin } from '../utils';
+import { getRandomNumberWithin } from '../utils/utils';
 
 const description = 'What number is missing in the progression?';
 

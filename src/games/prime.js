@@ -1,4 +1,4 @@
-import { getRandomNumberWithin, isCorrectAnswer } from '../utils';
+import { getRandomNumberWithin, isCorrectAnswer } from '../utils/utils';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
